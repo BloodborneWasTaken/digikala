@@ -9,9 +9,8 @@ import Lists from "./pages/Lists";
 import NotFound from "./pages/NotFound";
 import Empty from "./pages/Empty";
 import Favorite from "./pages/Favorite";
-import Other from "./pages/Other";
-import Notificition from "./pages/Notificition";
 import EmptyComment from "./pages/EmptyComment";
+import ListsDetail from "./pages/ListsDetail";
 
 function App() {
   return (
@@ -28,9 +27,7 @@ function App() {
           </Route>
           <Route path="Lists" element={<Lists />}>
             <Route index element={<Favorite />} />
-            <Route path="1" element={<Favorite />} />
-            <Route path="2" element={<Other />} />
-            <Route path="3" element={<Notificition />} />
+            <Route path=":id" element={<ListsDetail />} />
           </Route>
           <Route path="Comments" element={<Comments />}>
             <Route index element={<EmptyComment />} />
